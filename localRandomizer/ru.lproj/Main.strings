@@ -1,0 +1,39 @@
+
+/* Class = "UIButton"; normalTitle = "RANDOMIZE"; ObjectID = "0bq-3H-KCA"; */
+"0bq-3H-KCA.normalTitle" = "Спросить звезды";
+
+/* Class = "UIViewController"; title = "Results"; ObjectID = "0gm-ig-9Ff"; */
+"0gm-ig-9Ff.title" = "Результат";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "0x2-1m-sNh"; */
+"0x2-1m-sNh.title" = "Назад";
+
+/* Class = "UINavigationItem"; title = "Random list creation"; ObjectID = "35X-yp-6bY"; */
+"35X-yp-6bY.title" = "Список для рандома";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "5cX-GO-6MB"; */
+"5cX-GO-6MB.text" = "Тайтл?";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "8eP-WY-TEY"; */
+"8eP-WY-TEY.normalTitle" = "Очистить";
+
+/* Class = "UILabel"; text = "Connections: 0"; ObjectID = "MAh-Ga-DVf"; */
+"MAh-Ga-DVf.text" = "Connections: 0";
+
+/* Class = "UIButton"; normalTitle = "Generate"; ObjectID = "TYv-kX-jz6"; */
+"TYv-kX-jz6.normalTitle" = "Сгенерировать";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "aXw-N5-gZa"; */
+"aXw-N5-gZa.normalTitle" = "Добавить";
+
+/* Class = "UIButton"; normalTitle = "RANDOMIZE"; ObjectID = "bdd-ek-6w8"; */
+"bdd-ek-6w8.normalTitle" = "Спросить звезды";
+
+/* Class = "UITextField"; placeholder = "Enter list item for randomize"; ObjectID = "beV-EH-q3f"; */
+"beV-EH-q3f.placeholder" = "Введите имя";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bkE-Qo-Fu1"; */
+"bkE-Qo-Fu1.text" = "Лэйбл";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cqE-As-9KR"; */
+"cqE-As-9KR.text" = "Лэйбл2";
