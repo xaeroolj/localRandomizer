@@ -171,7 +171,10 @@ class RandomListVC: UIViewController {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? ListResultViewController else {fatalError("segue Error!")}
+        guard let vc = segue.destination as? ListResultViewController else {
+//            fatalError("segue Error!")
+            return
+        }
         vc.listViewModel.addViewModel(self.resultViewModel!)
         vc.personList = self.personListVM.getPersonsStringArray()
         
