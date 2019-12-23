@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ListResultViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var randomiseBtn: UIButton!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
+    var notificationToken: NotificationToken? = nil
     
     var listViewModel = ListResultTotalViewModel()
     var personList : [String]!
@@ -22,10 +25,64 @@ class ListResultViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.delegate = self
         indicator.hidesWhenStopped = true
+        listViewModel.fillStroredResults()
 
         // Do any additional setup after loading the view.
+        // Observe Results Notifications
+        
+        notificationToken = listViewModel.getAllResults().observe { [weak self] (changes: RealmCollectionChange) in
+            guard let tableView = self?.tableView else { return }
+            switch changes {
+            case .initial:
+                // Results are now populated and can be accessed without blocking the UI
+                tableView.reloadData()
+            case .update(_, let deletions, let insertions, let modifications):
+                // Query results have changed, so apply them to the UITableView
+                tableView.beginUpdates()
+                // Always apply updates in the following order: deletions, insertions, then modifications.
+                // Handling insertions before deletions may result in unexpected behavior.
+                tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
+                                     with: .automatic)
+                tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
+                                     with: .automatic)
+                tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
+                                     with: .automatic)
+                
+                tableView.endUpdates()
+                
+                if insertions.count > 0 {
+                    DispatchQueue.main.async {
+                        self!.tableView.scrollToRow(at: IndexPath(row: self!.listViewModel.totalItems() - 1, section: 0), at: .bottom, animated: true)
+                    }
+                }
+            case .error(let error):
+                // An error occurred while opening the Realm file on the background worker thread
+                fatalError("\(error)")
+            }
+        }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if self.listViewModel.totalItems() > 1 {
+            DispatchQueue.main.async {
+                self.tableView.scrollToRow(at: IndexPath(row: self.listViewModel.totalItems() - 1, section: 0), at: .bottom, animated: true)
+            }
+        }
+        
+    }
+    
+    deinit {
+        notificationToken?.invalidate()
+    }
+    
+    @IBAction func trashBtnWasPressed(_ sender: Any) {
+        
+        RealmService().removeAllResults()
+    }
+    
+    
     @IBAction func randomiseBtnWasPressed(_ sender: Any) {
+        self.personList = PersonListViewModel().getPersonsStringArray()
         
         if personList.count <= 1 {
             return
@@ -45,10 +102,8 @@ class ListResultViewController: UIViewController {
                 let resultModel = ListResultModel(date: Date(), resultString: totalString)
                 let resultViewModel = ListResultViewModel(resultModel)
                 self.listViewModel.addViewModel(resultViewModel)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    self.tableView.scrollToRow(at: IndexPath(row: self.listViewModel.totalItems() - 1, section: 0), at: .bottom, animated: true)
-                }
+                
+                
                 
             case .failure(let error):
                 self.showAllert(title: "Error:", message: error.localizedDescription, action: nil)

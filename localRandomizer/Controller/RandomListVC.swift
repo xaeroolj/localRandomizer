@@ -116,13 +116,16 @@ class RandomListVC: UIViewController {
             case .success(let successArray):
 //                print(successArray)
                 let totalString: String = successArray.joined(separator: ", ")
-                let action: UIAlertAction = UIAlertAction(title: "Next", style: .default, handler: { (action) in
+                let action: UIAlertAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                     let resultModel = ListResultModel(date: Date(), resultString: totalString)
+                    
                     self.resultViewModel = ListResultViewModel(resultModel)
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "showHistorySegue", sender: nil)
-                    }
+                    self.resultViewModel!.storeValues()
+//                    DispatchQueue.main.async {
+//                        self.performSegue(withIdentifier: "showHistorySegue", sender: nil)
+//                    }
                 })
+                
                 self.showAllert(title: "Result:", message: totalString, action: action)
                 
             case .failure(let error):
@@ -155,6 +158,8 @@ class RandomListVC: UIViewController {
     func showAllert(title: String, message: String, action: UIAlertAction?) {
         
         let allertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        
         if let action = action {
             
             allertController.addAction(action)
@@ -165,6 +170,11 @@ class RandomListVC: UIViewController {
         }
         
         DispatchQueue.main.async {
+            if #available(iOS 13.0, *) {
+                allertController.view.tintColor = UIColor.label
+            } else {
+                // Fallback on earlier versions
+            }
             self.present(allertController, animated: true, completion: nil)
 
         }

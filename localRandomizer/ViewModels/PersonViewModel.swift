@@ -39,10 +39,12 @@ struct PersonListViewModel
     func removePerson(index: Int) {
         RealmService().removePerson(index: index)
     }
+    
     func getPersonsStringArray() -> [String] {
         let array: [String] = RealmService().getAllPersons().map {
             $0.name
         }
+        
         return array
     }
 }

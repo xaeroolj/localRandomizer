@@ -10,7 +10,8 @@ import Foundation
 import RealmSwift
 
 class RandomResultModel: Object{
-    @objc dynamic var id = 0
+    
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var resultString = ""
     @objc dynamic var generatedDate = Date()
     
@@ -18,6 +19,7 @@ class RandomResultModel: Object{
     override static func primaryKey() -> String? {
         return "id"
     }
+    
     
     override static func indexedProperties() -> [String] {
         return ["generatedDate"]

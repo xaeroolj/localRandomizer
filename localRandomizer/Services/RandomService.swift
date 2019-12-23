@@ -46,6 +46,8 @@ class RandomService {
     static let instance =  RandomService()
     var delegate: RandomServiceDelegate?
     var resultArray: [Int] = [Int]()
+    
+    var lastNames = [String]()
     let nameDic: [Int : String] = [1 : "123",
                                    2 : "12345",
                                    3 : "1234567",
