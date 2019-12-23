@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		FF74015E232D2D8000FBA0AD /* ListResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74015D232D2D8000FBA0AD /* ListResultTableViewCell.swift */; };
 		FF740160232D2DFF00FBA0AD /* ListResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF74015F232D2DFF00FBA0AD /* ListResultViewModel.swift */; };
 		FF740162232D2E1000FBA0AD /* ListResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF740161232D2E1000FBA0AD /* ListResultModel.swift */; };
+		FF78968723B115CD00BB1021 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF78968623B115CD00BB1021 /* AboutVC.swift */; };
 		FF7DE8462386DF390008E3D6 /* secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7DE8452386DF390008E3D6 /* secret.swift */; };
 		FFDCE188226A32D30085E3FE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDCE187226A32D30085E3FE /* Person.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		FF74015D232D2D8000FBA0AD /* ListResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultTableViewCell.swift; sourceTree = "<group>"; };
 		FF74015F232D2DFF00FBA0AD /* ListResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultViewModel.swift; sourceTree = "<group>"; };
 		FF740161232D2E1000FBA0AD /* ListResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResultModel.swift; sourceTree = "<group>"; };
+		FF78968623B115CD00BB1021 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		FF7DE8452386DF390008E3D6 /* secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secret.swift; sourceTree = "<group>"; };
 		FFDCE187226A32D30085E3FE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		FFE995C12331287D00B2E5FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				FF18F9E4207A125400CB7E01 /* ViewController.swift */,
 				FF074454226A0BFB008EC7B2 /* RandomListVC.swift */,
 				FF74015A232D2D4E00FBA0AD /* ListResultViewController.swift */,
+				FF78968623B115CD00BB1021 /* AboutVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				FF18F9E3207A125400CB7E01 /* AppDelegate.swift in Sources */,
 				FF7DE8462386DF390008E3D6 /* secret.swift in Sources */,
 				FF740153232BF16200FBA0AD /* PersonViewModel.swift in Sources */,
+				FF78968723B115CD00BB1021 /* AboutVC.swift in Sources */,
 				FF740162232D2E1000FBA0AD /* ListResultModel.swift in Sources */,
 				FF740157232C256900FBA0AD /* RealmService.swift in Sources */,
 				FF74015B232D2D4E00FBA0AD /* ListResultViewController.swift in Sources */,
@@ -441,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = CH6GQXAMK3;
 				INFOPLIST_FILE = localRandomizer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -448,6 +453,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trekhlebov.listRandomizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -461,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = CH6GQXAMK3;
 				INFOPLIST_FILE = localRandomizer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -468,6 +475,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trekhlebov.listRandomizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

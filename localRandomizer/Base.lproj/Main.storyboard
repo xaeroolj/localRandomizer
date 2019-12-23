@@ -187,17 +187,43 @@
             </objects>
             <point key="canvasLocation" x="3172" y="-651.72413793103453"/>
         </scene>
-        <!--View Controller-->
+        <!--About-->
         <scene sceneID="LFk-Jx-ro0">
             <objects>
-                <viewController id="ArJ-FI-Dcq" sceneMemberID="viewController">
+                <viewController id="ArJ-FI-Dcq" customClass="AboutVC" customModule="localRandomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sV4-b0-pVD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zof-2I-pfe">
+                                <rect key="frame" x="100" y="246" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zof-2I-pfe" secondAttribute="height" multiplier="1:1" id="A3e-ik-TpT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOp-Zr-CFt">
+                                <rect key="frame" x="138.5" y="441" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zof-2I-pfe" firstAttribute="centerX" secondItem="sV4-b0-pVD" secondAttribute="centerX" id="0ga-Ij-zRc"/>
+                            <constraint firstItem="zOp-Zr-CFt" firstAttribute="centerX" secondItem="sV4-b0-pVD" secondAttribute="centerX" id="6qH-yp-MMg"/>
+                            <constraint firstItem="zOp-Zr-CFt" firstAttribute="top" secondItem="zof-2I-pfe" secondAttribute="bottom" constant="20" id="Hih-Mt-Kpc"/>
+                            <constraint firstItem="fBn-gn-ofS" firstAttribute="trailing" secondItem="zof-2I-pfe" secondAttribute="trailing" constant="100" id="I0L-YT-zDZ"/>
+                            <constraint firstItem="zof-2I-pfe" firstAttribute="centerY" secondItem="sV4-b0-pVD" secondAttribute="centerY" id="X2w-Vg-bKt"/>
+                            <constraint firstItem="zof-2I-pfe" firstAttribute="leading" secondItem="fBn-gn-ofS" secondAttribute="leading" constant="100" id="zgW-HM-MgH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fBn-gn-ofS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KKj-yt-No6"/>
+                    <navigationItem key="navigationItem" title="About" id="KKj-yt-No6"/>
+                    <connections>
+                        <outlet property="appLogo" destination="zof-2I-pfe" id="LaU-lH-wKi"/>
+                        <outlet property="versionLbl" destination="zOp-Zr-CFt" id="24V-2W-ZPk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4a-zV-orQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -370,6 +396,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="3888" height="2592"/>
         <image name="archivebox" catalog="system" width="64" height="52"/>
         <image name="info.circle" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
