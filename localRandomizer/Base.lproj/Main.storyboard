@@ -332,7 +332,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cVU-Xa-UNk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Last session History" id="bXp-P3-Pzn">
+                    <navigationItem key="navigationItem" title="Archive" id="bXp-P3-Pzn">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="PW3-MG-K0e">
                             <connections>
                                 <action selector="trashBtnWasPressed:" destination="0gm-ig-9Ff" id="rGq-t1-NHT"/>

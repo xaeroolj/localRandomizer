@@ -1,12 +1,12 @@
 
 /* Class = "UIButton"; normalTitle = "RANDOMIZE"; ObjectID = "0bq-3H-KCA"; */
-"0bq-3H-KCA.normalTitle" = "RANDOMIZE";
+"0bq-3H-KCA.normalTitle" = "Перемешать";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "0x2-1m-sNh"; */
-"0x2-1m-sNh.title" = "Back";
+"0x2-1m-sNh.title" = "Назад";
 
 /* Class = "UINavigationItem"; title = "Random list creation"; ObjectID = "35X-yp-6bY"; */
-"35X-yp-6bY.title" = "Random list creation";
+"35X-yp-6bY.title" = "Редактор списка";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "5cX-GO-6MB"; */
 "5cX-GO-6MB.text" = "Title";
@@ -18,7 +18,7 @@
 "J2U-NU-K7f.title" = "Item";
 
 /* Class = "UINavigationItem"; title = "About"; ObjectID = "KKj-yt-No6"; */
-"KKj-yt-No6.title" = "About";
+"KKj-yt-No6.title" = "О приложении";
 
 /* Class = "UILabel"; text = "Connections: 0"; ObjectID = "MAh-Ga-DVf"; */
 "MAh-Ga-DVf.text" = "Connections: 0";
@@ -30,16 +30,16 @@
 "Y2m-dl-5E6.title" = "Item";
 
 /* Class = "UIButton"; normalTitle = "Add"; ObjectID = "aXw-N5-gZa"; */
-"aXw-N5-gZa.normalTitle" = "Add";
+"aXw-N5-gZa.normalTitle" = "Добавить";
 
 /* Class = "UINavigationItem"; title = "Last session History"; ObjectID = "bXp-P3-Pzn"; */
-"bXp-P3-Pzn.title" = "Last session History";
+"bXp-P3-Pzn.title" = "История";
 
 /* Class = "UIButton"; normalTitle = "RANDOMIZE"; ObjectID = "bdd-ek-6w8"; */
-"bdd-ek-6w8.normalTitle" = "RANDOMIZE";
+"bdd-ek-6w8.normalTitle" = "Перемешать";
 
 /* Class = "UITextField"; placeholder = "Enter list item for randomize"; ObjectID = "beV-EH-q3f"; */
-"beV-EH-q3f.placeholder" = "Enter list item for randomize";
+"beV-EH-q3f.placeholder" = "Введите строку";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bkE-Qo-Fu1"; */
 "bkE-Qo-Fu1.text" = "Label";
@@ -48,10 +48,10 @@
 "cqE-As-9KR.text" = "Label";
 
 /* Class = "UITabBarItem"; title = "Archive"; ObjectID = "fFz-k8-G8N"; */
-"fFz-k8-G8N.title" = "Archive";
+"fFz-k8-G8N.title" = "История";
 
 /* Class = "UITabBarItem"; title = "List Creation"; ObjectID = "pig-td-qNh"; */
-"pig-td-qNh.title" = "List Creation";
+"pig-td-qNh.title" = "Редактор списка";
 
 /* Class = "UILabel"; text = "App Version:"; ObjectID = "zOp-Zr-CFt"; */
-"zOp-Zr-CFt.text" = "App Version:";
+"zOp-Zr-CFt.text" = "Версия:";
