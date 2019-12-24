@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 class RandomListVC: UIViewController {
     
@@ -126,6 +127,14 @@ class RandomListVC: UIViewController {
 //                    }
                 })
                 
+                // Analytics
+                Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                    AnalyticsParameterItemID: "Id-Btn",
+                AnalyticsParameterItemName: "ListRandomBtn",
+                AnalyticsParameterContentType: "RandomizeUsed"
+                ])
+                //
+                
                 self.showAllert(title: "Result:", message: totalString, action: action)
                 
             case .failure(let error):
@@ -136,6 +145,7 @@ class RandomListVC: UIViewController {
             
 
         }
+        
     }
 
     @objc func dismissKeyboard() {
@@ -152,6 +162,16 @@ class RandomListVC: UIViewController {
             
             
 //            self.view.endEditing(true)
+            
+            // Analytics
+            Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                AnalyticsParameterItemID: "Id-Item-Add",
+            AnalyticsParameterItemName: "AddItemBtn",
+            AnalyticsParameterContentType: "AddItemUsed"
+            ])
+            //
+            
+            
         }
     }
     
@@ -217,6 +237,13 @@ extension RandomListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.personListVM.removePerson(index: indexPath.row)
+            // Analytics
+            Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                AnalyticsParameterItemID: "Id-Item-Remove",
+            AnalyticsParameterItemName: "RemoveItemSlider",
+            AnalyticsParameterContentType: "RemoveItemUsed"
+            ])
+            //
         }
     }
 }

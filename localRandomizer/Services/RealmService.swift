@@ -35,7 +35,7 @@ class RealmService {
         })
         
 //        let config = Realm.Configuration()
-        print(config.fileURL!)
+//        print(config.fileURL!)
         
         
         Realm.Configuration.defaultConfiguration = config

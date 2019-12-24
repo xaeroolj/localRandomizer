@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 class ListResultViewController: UIViewController {
     
@@ -78,6 +79,13 @@ class ListResultViewController: UIViewController {
     @IBAction func trashBtnWasPressed(_ sender: Any) {
         
         RealmService().removeAllResults()
+        // Analytics
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "Id-Btn-Trash",
+        AnalyticsParameterItemName: "ArchiveTrashBtn",
+        AnalyticsParameterContentType: "ClearArchive"
+        ])
+        //
     }
     
     
@@ -102,6 +110,13 @@ class ListResultViewController: UIViewController {
                 let resultModel = ListResultModel(date: Date(), resultString: totalString)
                 let resultViewModel = ListResultViewModel(resultModel)
                 self.listViewModel.addViewModel(resultViewModel)
+                // Analytics
+                Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                    AnalyticsParameterItemID: "Id-Btn",
+                AnalyticsParameterItemName: "ArchiveRandomBtn",
+                AnalyticsParameterContentType: "RandomizeUsed"
+                ])
+                //
                 
                 
                 

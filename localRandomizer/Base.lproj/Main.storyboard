@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="118" y="582"/>
         </scene>
-        <!--Random list creation-->
+        <!--Random List Edit-->
         <scene sceneID="Zle-hK-fRh">
             <objects>
-                <viewController id="jd3-kF-aNx" customClass="RandomListVC" customModule="localRandomizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Random List Edit" id="jd3-kF-aNx" customClass="RandomListVC" customModule="localRandomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GcL-Dp-D7u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="3172" y="-651.72413793103453"/>
         </scene>
-        <!--About-->
+        <!--AboutApp-->
         <scene sceneID="LFk-Jx-ro0">
             <objects>
-                <viewController id="ArJ-FI-Dcq" customClass="AboutVC" customModule="localRandomizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AboutApp" id="ArJ-FI-Dcq" customClass="AboutVC" customModule="localRandomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sV4-b0-pVD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,10 +249,10 @@
             </objects>
             <point key="canvasLocation" x="1548" y="-314"/>
         </scene>
-        <!--Last session History-->
+        <!--Archive-->
         <scene sceneID="WfX-W8-dzh">
             <objects>
-                <viewController id="0gm-ig-9Ff" customClass="ListResultViewController" customModule="localRandomizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Archive" id="0gm-ig-9Ff" customClass="ListResultViewController" customModule="localRandomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RHS-L3-1vH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
